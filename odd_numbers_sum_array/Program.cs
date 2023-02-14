@@ -19,15 +19,12 @@ void FillArray(int[] collection)
 int GetOddSum (int[] odds)
 {
     int size = odds.Length;
-    int position = 0;
+    // int position = 0;
     int SumOdds = 0;
-    while (position <size)
+    for(int position=0; position<size; position++)
     {
-        if (position%2 != 0)
-        { 
-           SumOdds = SumOdds + odds[position]; 
-        }
-        position++;
+        if(position % 2 != 0)
+        {SumOdds = SumOdds + odds[position];};
     }
     Console.WriteLine($"Cуммa элементов, стоящих на нечётных позициях: {SumOdds}");
     return SumOdds;
